@@ -15,7 +15,7 @@ const ShowBooks = () => {
 
   const fetchBook = async () => {
     setLoading(true);
-    const res = await axios.get(`http://localhost:5555/books/${id}`, {
+    const res = await axios.get(`https://bookesh-backend.onrender.com/books/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setBook(res.data.data || res.data);
@@ -34,7 +34,7 @@ const ShowBooks = () => {
     if (!commentText.trim()) return;
 
     await axios.post(
-      `http://localhost:5555/books/${id}/comments`,
+      `https://bookesh-backend.onrender.com/${id}/comments`,
       { text: commentText },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -45,7 +45,7 @@ const ShowBooks = () => {
 
   const handleDeleteComment = async (commentId) => {
     await axios.delete(
-      `http://localhost:5555/books/${id}/comments/${commentId}`,
+      `https://bookesh-backend.onrender.com/${id}/comments/${commentId}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 

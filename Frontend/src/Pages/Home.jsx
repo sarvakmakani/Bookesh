@@ -25,7 +25,7 @@ const Home = () => {
 
     setLoading(true);
     axios
-      .get("http://localhost:5555/books", {
+      .get("https://bookesh-backend.onrender.com/books", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -49,7 +49,7 @@ const Home = () => {
   const handleBookmark = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5555/books/${id}/bookmark`,
+        `https://bookesh-backend.onrender.com/${id}/bookmark`,
         {},
         {
           headers: {
@@ -58,7 +58,7 @@ const Home = () => {
         },
       );
 
-      const res = await axios.get("http://localhost:5555/books", {
+      const res = await axios.get("https://bookesh-backend.onrender.com/books", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

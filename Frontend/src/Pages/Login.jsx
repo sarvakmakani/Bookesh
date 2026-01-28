@@ -17,7 +17,7 @@ const Login = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5555/login", {
+      const res = await axios.post("https://bookesh-backend.onrender.com/login", {
         email,
         password,
       });

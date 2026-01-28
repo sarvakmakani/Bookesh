@@ -26,7 +26,7 @@ const UpdateBook = () => {
 
     setLoading(true);
     axios
-      .get(`http://localhost:5555/books/${id}`, {
+      .get(`https://bookesh-backend.onrender.com/books/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -50,7 +50,7 @@ const UpdateBook = () => {
 
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, data, {
+      .put(`https://bookesh-backend.onrender.com/books/${id}`, data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
