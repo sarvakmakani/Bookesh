@@ -49,7 +49,7 @@ const Home = () => {
   const handleBookmark = async (id) => {
     try {
       await axios.put(
-        `https://bookesh-backend.onrender.com/${id}/bookmark`,
+        `https://bookesh-backend.onrender.com/books/${id}/bookmark`,
         {},
         {
           headers: {
